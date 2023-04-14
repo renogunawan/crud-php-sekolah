@@ -1,8 +1,6 @@
 <?php
 // Include config file
 require_once "config.php";
-
-
 if (isset($_POST['kirim'])) {
 	// Mendapatkan data pengguna dari database
 	$username = $_POST['nama'];
@@ -87,6 +85,29 @@ if (isset($_POST['kirim'])) {
 		        <a href="register.php">Register</a>
 				</button>
 					</div>
+
+					</div>
+				<a href="http://localhost/sekolah/register/register.php">ppppppppppp</a>
+				<input type="submit" class="btn" name="kirim" value="Login">
+				<a href="http://localhost/sekolah/forgot_password.php">Forgot password!!</a>
+			</form>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript">
+		function togglePasswordVisibility() {
+			var passwordInput = document.getElementById("password-input");
+			var togglePasswordVisibilityIcon = document.getElementById("toggle-password-visibility-icon");
+			if (passwordInput.type === "password") {
+				passwordInput.type = "text";
+				togglePasswordVisibilityIcon.classList.remove("fa-eye");
+				togglePasswordVisibilityIcon.classList.add("fa-eye-slash");
+			} else {
+				passwordInput.type = "password";
+				togglePasswordVisibilityIcon.classList.remove("fa-eye-slash");
+				togglePasswordVisibilityIcon.classList.add("fa-eye");
+			}
+		}
 
 				</form>
 			</div>
