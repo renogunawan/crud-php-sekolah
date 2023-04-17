@@ -89,6 +89,11 @@ body{ background-image: url("bg-01.jpg");
     <input class="input-field" type="password" placeholder="Password" name="password">
   </div>
 
+  <div class="input-container">
+    <i class="fa fa-key icon"></i>
+    <input class="input-field" type="password" placeholder="konfirmasi password" name="confirm_password">
+</div>
+
   <button type="submit" class="btn" name="TambahUser"> <i class="fa fa-plus"> </i> &nbsp; Register</button>
   
 </form>
@@ -100,7 +105,14 @@ if(isset($_POST['TambahUser'])){
 
   $username = $_POST['nama'];
 $password = $_POST['password'];
+$confirm_password = $_POST['confirm_password'];
+
+if ($password != $confirm_password) {
+  echo "<script>alert('Sandi tidak cocok.')</script>";
+  exit();
+}
 $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+
 try{
   $query = "INSERT INTO register (nama, password) VALUES ('$username', '$hashedPassword')";
   if(mysqli_query($link,$query)){

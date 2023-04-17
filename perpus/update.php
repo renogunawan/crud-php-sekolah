@@ -38,7 +38,15 @@ if(isset($_POST['kirim'])){
         document.location.href= 'create.php';</script>";
         exit;
     }
+
     $tgl_kembali= date('d-m-Y', strtotime($tgl_kembali));
+
+    if (strtotime($tgl_kembali) < strtotime($tgl_pinjam)) {
+        echo "<script>alert('Tanggal kembali tidak boleh sebelum tanggal pinjam!');
+        document.location.href= 'create.php';</script>";
+        exit;
+    }
+    
   
     $insert= mysqli_query($link, "UPDATE perpus SET
                                    

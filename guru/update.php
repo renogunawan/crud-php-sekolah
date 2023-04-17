@@ -93,7 +93,7 @@ $query_mapel = mysqli_query($link, "SELECT * FROM matpel");
                        
                             <label>Nama guru</label>
                             <input type="text" name="nama" class="form-control" value="<?php echo $query['nama']; ?>">
-                        </div>
+                        </div><br>
                         <div>
                             <label for="">Jenis Kelamin</label><br>
                            <input type="radio" name="jenis_kelamin" value="laki-laki"  <?= ($query['jenis_kelamin'] == 'laki-laki')? "checked": ''?>>laki-laki
@@ -103,7 +103,7 @@ $query_mapel = mysqli_query($link, "SELECT * FROM matpel");
                             <label for="">foto</label>
                             <input type="file" name="image" id="image" value="">
                             <img src="../guru/source/<?php echo $query['name']; ?>" width="10%" alt="">
-                        </div><br>
+                        </div><br><br>
                         <div>
                         <label>Mapel</label>
                         <select name="mapel" id="">

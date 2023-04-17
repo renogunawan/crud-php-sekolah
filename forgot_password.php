@@ -34,9 +34,15 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <meta name='viewport' content='width=device-width, initial-scale=1'>
 <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+<link rel="shortcut icon" type="image/png" href="myweb/forgot.png">
+
 
 </head>
 <style>
+  body {
+  background-color: blue;
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
  
@@ -121,7 +127,7 @@ a {
          <i class='fas fa-key' style='font-size:20px'></i> &nbsp;<input type="password" name="confirm_password" required class="form-control">
     </div>   <br>
        <button type="submit" class="w3-button w3-red"> <i class="fa fa-undo" aria-hidden="true"></i>&nbsp; Reset password</button>  
-        <button type="back" class="w3-button w3-light-grey"> <a href="dashboard.php"> <i class="fa fa-home"></i> &nbsp; Kembali ke menu</a> </button>  </form>
+        <button type="back" class="w3-button w3-light-grey"> <a href="index.php"> <i class="fa fa-home"></i> &nbsp; Kembali ke login</a> </button>  </form>
     </form>
 </body>
 </html>
