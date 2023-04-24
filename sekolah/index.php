@@ -89,7 +89,7 @@ if (isset($_POST['kirim'])) {
 		        <a href="register.php" style="color:white">Register</a>
 				</button>
 					</div>
-					<a href="http://localhost/sekolah/forgot_password.php" style="color:white">Forgot password!!</a>
+					<a href="http://localhost/sekolah/forgot_password.php" style="color:white">Lupa password?</a>
 
 				</form>
 			</div>
